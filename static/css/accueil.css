@@ -93,7 +93,7 @@ div {
     max-width: 600px;
     width: fit-content;
 
-    margin-top: calc(710px + 12vh);
+    margin-top: 95vh;
     /* 6vh + 340px + 340px + 6vh */
 
     position: relative;
@@ -108,7 +108,7 @@ div {
 .skills {
     max-width: 600px;
     width: fit-content;
-    margin-top: 320px;
+    margin-top: 250px;
 
     position: relative;
     right: -50%;
