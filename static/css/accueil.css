@@ -1,0 +1,271 @@
+main {
+    overflow-y: hidden;
+}
+
+h1,
+h2,
+h3,
+label,
+p,
+div {
+    color: white;
+}
+
+h1 {
+    margin-bottom: 50px;
+}
+
+p,
+div {
+    line-height: 1.5rem;
+}
+
+.background {
+    display: block;
+    width: 1000px;
+    min-height: 3000px;
+
+    position: absolute;
+    left: 50%;
+    top: 6vh;
+    transform: translateX(-50%);
+    z-index: 0;
+}
+
+
+.background svg #circle {
+    stroke-dasharray: 800 1000;
+    animation: hideCircle 0.5s 2.5s ease-out forwards;
+}
+
+.background svg #following {
+    stroke-dasharray: 20000 10000;
+    stroke-dashoffset: 20000;
+    animation: displayFollowing 3s 3s ease-out forwards;
+}
+
+.headline h1 {
+    line-height: 2rem;
+}
+
+.headline {
+    text-align: center;
+    width: fit-content;
+    position: relative;
+    left: 50%;
+    top: calc(6vh + 340px);
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+.little-svg {
+    display: none;
+}
+
+#subtitle {
+    position: relative;
+    margin-top: 35px;
+}
+
+#subtitle::before,
+#subtitle::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: -1px;
+    left: 0;
+}
+
+#subtitle::before {
+    background-color: black;
+    animation: typewriter 1.5s steps(32) forwards;
+}
+
+#subtitle::after {
+    width: 0.125em;
+    background-color: white;
+    animation: typewriter 1.5s steps(32) forwards,
+        blinking 1.5s ease infinite;
+}
+
+.description {
+    max-width: 600px;
+    width: fit-content;
+
+    margin-top: calc(710px + 12vh);
+    /* 6vh + 340px + 340px + 6vh */
+
+    position: relative;
+    left: 50%;
+    transform: translateX(-37%);
+}
+
+.description #general {
+    margin-bottom: 100px;
+}
+
+.skills {
+    max-width: 600px;
+    width: fit-content;
+    margin-top: 320px;
+
+    position: relative;
+    right: -50%;
+
+    text-align: end;
+}
+
+.skills .content {
+    display: grid;
+    grid-template-columns: 2fr 50px;
+    grid-template-rows: repeat(6, 1fr);
+    align-items: center;
+    gap: 20px;
+}
+
+.skills .content .progress {
+    display: flex;
+    justify-content: flex-end;
+
+    height: 8px;
+    width: 160px;
+
+    border-radius: 5px;
+
+    background-color: #616161;
+}
+
+.skills .content .progress-value {
+    height: 100%;
+
+    border-radius: 5px;
+
+    background-color: #1e88e5;
+}
+
+.skills .content .progress-value#python-value {
+    width: 80%;
+}
+
+.skills .content .progress-value#c-value {
+    width: 70%;
+}
+
+.skills .content .progress-value#android-value {
+    width: 60%;
+}
+
+.skills .content .progress-value#flask-value {
+    width: 70%;
+}
+
+.skills .content .progress-value#linux-value {
+    width: 55%;
+}
+
+.skills .content .progress-value#word-value {
+    width: 75%;
+}
+
+img {
+    width: 50px;
+}
+
+.experience {
+    width: fit-content;
+    margin-top: 320px;
+
+    position: relative;
+    left: 50%;
+
+    transform: translateX(-40%);
+}
+
+.experience .content {
+    max-width: 600px;
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    grid-template-rows: repeat(auto-fit, 1fr);
+
+    align-items: center;
+
+    column-gap: 40px;
+    row-gap: 80px;
+}
+
+.experience .content .work-headline {
+    margin: 0 0 20px 0;
+}
+
+.experience .content .work-description {
+    margin: 0 0 10px 0;
+}
+
+.education {
+    width: fit-content;
+    margin-top: 300px;
+
+    position: relative;
+    right: -50%;
+    transform: translateX(-60%);
+
+    text-align: end;
+}
+
+.education .content {
+    max-width: 600px;
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    grid-template-rows: repeat(auto-fit, 1fr);
+
+    align-items: center;
+
+    column-gap: 40px;
+    row-gap: 80px;
+}
+
+.education .content img {
+    width: 100px;
+}
+
+.education .content .education-headline {
+    margin: 0 0 20px 0;
+}
+
+.education .content .education-description {
+    margin: 0 0 10px 0;
+}
+
+.rewards {
+    width: fit-content;
+    margin-top: 300px;
+
+    position: relative;
+    left: 50%;
+    transform: translateX(-65%);
+}
+
+.rewards .content {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    grid-template-rows: repeat(aut-fit, 1fr);
+
+    align-items: center;
+
+    column-gap: 40px;
+    row-gap: 80px;
+}
+
+.rewards .content img {
+    width: 100px;
+    border-radius: 10px;
+}
+
+.reward .content .reward-headline {
+    margin: 0 0 20px 0;
+}
+
+.reward .content .reward-description {
+    margin: 0 0 10px 0;
+}

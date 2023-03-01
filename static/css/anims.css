@@ -1,0 +1,41 @@
+@keyframes typewriter {
+    to {
+        left: 100%;
+    }
+}
+
+@keyframes blinking {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes hideCircle {
+    from {
+        stroke-dashoffset: 0;
+    }
+
+    to {
+        stroke-dashoffset: -222;
+    }
+}
+
+@keyframes displayFollowing {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes displayLittle {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
