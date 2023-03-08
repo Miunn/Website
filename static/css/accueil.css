@@ -124,6 +124,8 @@ a {
     align-items: center;
     justify-items: center;
     gap: 20px;
+
+    overflow-x: hidden;
 }
 
 .skills .content .skill-tab {
@@ -159,9 +161,12 @@ a {
     height: 100%;
     border-radius: 5px;
     background-color: orange;
+
+    width: 0%;
+    transition: width 1s;
 }
 
-.skills .content .skill-tab .head .progress #python-progress {
+/*.skills .content .skill-tab .head .progress #python-progress {
     width: 80%;
 }
 
@@ -183,7 +188,7 @@ a {
 
 .skills .content .skill-tab .head .progress #office-progress {
     width: 60%;
-}
+}*/
 
 .skills .content .skill-tab h2 {
     height: fit-content;
