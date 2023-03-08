@@ -8,14 +8,14 @@
 {% block main %}
 
 <div class="background">
-    <svg viewBox="0 0 1400 8000" fill="none" stroke="white">
+    <svg viewBox="0 0 1400 8600" fill="none" stroke="white">
         <path id="cpu" stroke-width="15" stroke-linecap="round" stroke-linejoin="round"
             d="m 300 280 h 800 v 400 h -800 v -400 m 300 0 v -100 l -100 -100 a 1 1 0 0 0 -50 -50 a 1 1 0 0 0 50 50 m 200 200 v -200 a 1 1 0 0 0 0 -65 a 1 1 0 0 0 0 65 m 100 200 v -100 l 100 -100 a 1 1 0 0 0 50 -50 a 1 1 0 0 0 -50 50 m 200 300 h 100 l 100 -100 a 1 1 0 0 0 50 -50 a 1 1 0 0 0 -50 50 m -200 200 h 200 a 1 1 0 0 0 65 0 a 1 1 0 0 0 -65 0 m -200 100 h 100 l 100 100 a 1 1 0 0 0 50 50 a 1 1 0 0 0 -50 -50 m -500 0 v 100 l 100 100 a 1 1 0 0 0 50 50 a 1 1 0 0 0 -50 -50 m -200 -200 v 200 a 1 1 0 0 0 0 65 a 1 1 0 0 0 0 -65 m -100 -200 v 100 l -100 100 m -200 -300 h -100 l -100 100 a 1 1 0 0 0 -50 50 a 1 1 0 0 0 50 -50 m 200 -200 h -200 a 1 1 0 0 0 -65 0 a 1 1 0 0 0 65 0 m 200 -100 h -100 l -100 -100 a 1 1 0 0 0 -50 -50 a 1 1 0 0 0 50 50">
         </path>
         <path id="circle" stroke-width="15" stroke-linecap="round" stroke-linejoin="round"
             d="M 500 880 a 1 1 0 0 0 -50 50 a 1 1 0 0 0 50 -50"></path>
         <path id="following" stroke-width="15" stroke-linecap="round" stroke-linejoin="round"
-            d="M 500 880 l -200 200 v 1100 l 800 175 v 1000 l -800 175 v 1100 l 800 175 v 1100 l -800 175 v 800 a 1 1 0 0 0 0 50 a 1 1 0 0 0 0 -50">
+            d="M 500 880 l -200 200 v 1200 l 800 175 v 1400 l -800 175 v 1200 l 800 175 v 1200 l -800 175 v 700 a 1 1 0 0 0 0 50 a 1 1 0 0 0 0 -50">
         </path>
     </svg>
 </div>
@@ -31,9 +31,9 @@
             d="M 40 7 a 1 1 0 0 0 0 50 a 1 1 0 0 0 0 -50 a 1 1 0 0 0 0 50 v 1500"></path>
     </svg>
 
-    <svg class="little-svg" viewBox="0 0 80 3500" fill="none" stroke="white">
+    <svg class="little-svg" viewBox="0 0 80 3000" fill="none" stroke="white">
         <path id="description-path" stroke-width="15" stroke-linejoin="round" stroke-linecap="round"
-            d="M 40 7 a 1 1 0 0 0 0 50 a 1 1 0 0 0 0 -50 a 1 1 0 0 0 0 50 v 3500"></path>
+            d="M 40 7 a 1 1 0 0 0 0 50 a 1 1 0 0 0 0 -50 a 1 1 0 0 0 0 50 v 4000"></path>
     </svg>
 
     <h1 class="desc-title">Who am I ?</h1>
@@ -52,43 +52,86 @@
 </div>
 
 <div class="wrapper right skills">
-    <svg class="little-svg" viewBox="0 0 80 2300" fill="none" stroke="white">
+    <svg class="little-svg" viewBox="0 0 80 7000" fill="none" stroke="white">
         <path id="description-path" stroke-width="15" stroke-linejoin="round" stroke-linecap="round"
-            d="M 40 7 a 1 1 0 0 0 0 50 a 1 1 0 0 0 0 -50 a 1 1 0 0 0 0 50 v 2300"></path>
+            d="M 40 7 a 1 1 0 0 0 0 50 a 1 1 0 0 0 0 -50 a 1 1 0 0 0 0 50 v 8000"></path>
     </svg>
 
-    <h1 class="skills-title">My Skills</h1>
+    <h1 class="skills-title">Skills</h1>
 
     <div class="content">
-        <div class="progress">
-            <div class="progress-value" id="python-value"></div>
+        <div class="skill-tab">
+            <div class="head">
+                <h2>Python</h2>
+                <div class="progress" title="80%">
+                    <div class="progress-value" id="python-progress"></div>
+                </div>
+
+            </div>
+            <p>Automation and seccurity related scripts, math visualization</p>
         </div>
         <img id="python" src="{{url_for('static', filename='assets/python.png')}}" alt="Python">
 
-        <div class="progress">
-            <div class="progress-value" id="c-value"></div>
+        <div class="skill-tab">
+            <div class="head">
+                <h2>C Language</h2>
+                <div class="progress" title="80%">
+                    <div class="progress-value" id="c-progress"></div>
+                </div>
+            </div>
+            <p>Development of graphical applications such as Sudoku and Sokoban games. Code available on <a
+                    href="https://gitlab.com/Miunn/sudoku-c">GitLab</a></p>
         </div>
         <img id="clanguage" src="{{url_for('static', filename='assets/clanguage.png')}}" alt="C">
 
-        <div class="progress">
-            <div class="progress-value" id="flask-value"></div>
+        <div class="skill-tab">
+            <div class="head">
+                <h2>HTML, CSS, JS, SQL, Flask</h2>
+                <div class="progress" title="70%">
+                    <div class="progress-value" id="web-progress"></div>
+                </div>
+            </div>
+            <p>Web development using Flask Python framework, modern web technologies and Jinja
+                templates. Full stack web development of a parking booking app.</p>
         </div>
         <img id="flask" src="{{url_for('static', filename='assets/flask.png')}}" alt="Flask">
 
-        <div class="progress">
-            <div class="progress-value" id="android-value"></div>
+        <div class="skill-tab">
+            <div class="head">
+                <h2>Android</h2>
+                <div class="progress" title="60%">
+                    <div class="progress-value" id="android-progress"></div>
+                </div>
+            </div>
+            <p>Native android applications development using Java and XML. Experience with Flutter
+                development.<br>Publications on the <a
+                    href="https://play.google.com/store/apps/developer?id=RCAapps">Google Play Store</a></p>
         </div>
         <img id="android" src="{{url_for('static', filename='assets/android.png')}}" alt="Android">
 
-        <div class="progress">
-            <div class="progress-value" id="linux-value"></div>
+        <div class="skill-tab">
+            <div class="head">
+                <h2>Linux</h2>
+                <div class="progress" title="70%">
+                    <div class="progress-value" id="linux-progress"></div>
+                </div>
+            </div>
+            <p>Daily use of Kali Linux (xfce desktop), experience with Ubuntu (GNOME desktop). Use of networking and
+                hacking tools like <a href="https://nmap.org/">nmap</a> and <a
+                    href="https://www.metasploit.com/">metasploit</a></p>
         </div>
         <img id="linux" src="{{url_for('static', filename='assets/linux.png')}}" alt="Linux">
 
-        <div class="progress">
-            <div class="progress-value" id="word-value"></div>
+        <div class="skill-tab">
+            <div class="head">
+                <h2>Microsoft Office</h2>
+                <div class="progress" title="60%">
+                    <div class="progress-value" id="office-progress"></div>
+                </div>
+            </div>
+            <p>Frequent use of Word, Excel and PowerPoint products from the Microsoft Office suite</p>
         </div>
-        <img id="word" src="{{url_for('static', filename='assets/word.png')}}" alt="Word">
+        <img id="word" src="{{url_for('static', filename='assets/office.png')}}" alt="Microsoft Office Suite">
     </div>
 </div>
 
@@ -98,7 +141,7 @@
             d="M 40 7 a 1 1 0 0 0 0 50 a 1 1 0 0 0 0 -50 a 1 1 0 0 0 0 50 v 3000"></path>
     </svg>
 
-    <h1 class="exp-title">Working experience</h1>
+    <h1 class="exp-title">Experiences</h1>
 
     <div class="content">
         <img id="insash" src="{{url_for('static', filename='assets/insash.png')}}" alt="./insa.sh">

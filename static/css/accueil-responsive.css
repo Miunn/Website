@@ -6,7 +6,7 @@
     }
 
     .background svg #following {
-        d: path("M 500 880 l -200 200 v 1500 l 800 175 v 1100 l -800 175 v 1200 l 800 175 v 1300 l -800 175 v 800 a 1 1 0 0 0 0 50 a 1 1 0 0 0 0 -50");
+        d: path("M 500 880 l -200 200 v 1700 l 800 175 v 1700 l -800 175 v 1300 l 800 175 v 1300 l -800 175 v 800 a 1 1 0 0 0 0 50 a 1 1 0 0 0 0 -50");
     }
 
     .headline {
@@ -19,8 +19,9 @@
     }
 
     .skills {
-        margin-top: 200px;
-        right: -45%;
+        margin-top: 270px;
+        right: -50%;
+        transform: translateX(-70%);
     }
 
     .experience {
@@ -34,7 +35,7 @@
     }
 
     .rewards {
-        margin-top: 200px;
+        margin-top: 190px;
         left: 55%;
     }
 }
@@ -64,8 +65,8 @@
         width: 100%;
         height: 100%;
 
-        stroke-dasharray: 4000 9000;
-        stroke-dashoffset: 4000;
+        stroke-dasharray: 5000 9000;
+        stroke-dashoffset: 5000;
         animation: displayLittle 1.5s 2s ease-in forwards;
     }
 
@@ -86,6 +87,7 @@
         right: 0%;
         transform: none;
         text-align: left;
+        align-items: start;
     }
 
     .wrapper.right .content {
@@ -107,8 +109,14 @@
         padding-bottom: 125px;
     }
 
+    .skills .little-svg path {
+        stroke-dasharray: 10000 10000;
+        stroke-dashoffset: 10000;
+    }
+
     .skills .content {
         grid-template-columns: 50px 2fr !important;
+        row-gap: 5px;
     }
 
     .skills .content img {
@@ -119,8 +127,19 @@
         grid-column: 2 !important;
     }
 
-    .skills .content .progress {
-        justify-content: flex-start;
+    .skills .content .skill-tab {
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    .skills .content .skill-tab .head {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 20px;
+    }
+
+    .skills .content .skill-tab .head .progress-value {
+        left: 0;
     }
 
     .experience {
