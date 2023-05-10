@@ -9,6 +9,15 @@
         d: path("M 500 880 l -200 200 v 1700 l 800 175 v 1700 l -800 175 v 1300 l 800 175 v 1300 l -800 175 v 800 a 1 1 0 0 0 0 50 a 1 1 0 0 0 0 -50");
     }
 
+    #links-container {
+        opacity: 1;
+        transition: opacity 0.3s;
+    }
+
+    #links-container.top-fixed {
+        opacity: 0;
+    }
+
     .headline {
         top: calc(6vh + 270px);
         font-size: 0.9em;

@@ -27,6 +27,33 @@
     <h2 id="subtitle">Computer Science & Cybersecurity</h2>
 </section>
 
+<section id="links-container">
+    <a href="http://gitlab.remicaulier.fr">
+        <svg fill="white" viewBox="-2 -2.5 24 24" id="gitlab">
+            <path
+                d="M10.006 18.443L6.326 7.118h7.36l-3.68 11.325zm0 0L1.168 7.118h5.158l3.68 11.325zM1.168 7.118l8.838 11.325-9.68-7.032a.762.762 0 0 1-.276-.852l1.118-3.441zm0 0L3.385.296a.38.38 0 0 1 .724 0l2.217 6.822H1.168zm8.838 11.325l3.68-11.325h5.157l-8.837 11.325zm8.837-11.325l1.119 3.441a.762.762 0 0 1-.277.852l-9.68 7.032 8.838-11.325zm0 0h-5.157L15.902.296a.38.38 0 0 1 .725 0l2.216 6.822z" />
+        </svg>
+    </a>
+
+    <a href="http://github.remicaulier.fr">
+        <svg viewBox="0 0 16 16" fill="white" id="github">
+            <path
+                d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z">
+            </path>
+        </svg>
+    </a>
+
+    <a href="mailto:remcaulier@orange.fr">
+        <svg viewBox="0 0 1792 1792" fill="white" id="mail">
+            <path d="M1792 710v794q0 66-47 113t-113 47h-1472q-66 0-113-47t-47-113v-794q44 49 101 87 362 246 497 345 57 42 92.5 65.5t94.5 48 110 24.5h2q51 0 110-24.5t94.5-48 92.5-65.5q170-123 498-345 57-39 100-87zm0-294q0 79-49 151t-122 123q-376 261-468 325-10 7-42.5 30.5t-54 38-52 32.5-57.5 27-50 9h-2q-23 0-50-9t-57.5-27-52-32.5-54-38-42.5-30.5q-91-64-262-182.5t-205-142.5q-62-42-117-115.5t-55-136.5q0-78 41.5-130t118.5-52h1472q65 0 112.5 47t47.5 113z"/>
+        </svg>
+    </a>
+
+    <a href="http://linkedin.remicaulier.fr">
+        <img src="{{url_for('static', filename='assets/linkedin.png')}}" alt="LinkedIn">
+    </a>
+</section>
+
 <div class="wrapper left description">
     <svg class="little-svg" id="start-little" viewBox="0 0 80 1500" fill="none" stroke="white">
         <path id="start-path" stroke-width="15" stroke-linejoin="round" stroke-linecap="round"
@@ -81,8 +108,8 @@
                     <div class="progress-value" id="c-progress"></div>
                 </div>
             </div>
-            <p>Development of graphical applications such as Sudoku and Sokoban games. Code available on <a
-                    href="https://gitlab.com/Miunn/sudoku-c">GitLab</a></p>
+            <p>Development of graphical applications such as Sudoku and Sokoban games using the SDL library.<br>Code
+                available on <a href="https://gitlab.com/Miunn/sudoku-c">GitLab</a></p>
         </div>
         <img id="clanguage" src="{{url_for('static', filename='assets/clanguage.png')}}" alt="C">
 
@@ -105,7 +132,7 @@
                     <div class="progress-value" id="android-progress"></div>
                 </div>
             </div>
-            <p>Native android applications development using Java and XML. Experience with Flutter
+            <p>Native android applications development using Java and XML. Experience in Flutter
                 development.<br>Publications on the <a
                     href="https://play.google.com/store/apps/developer?id=RCAapps">Google Play Store</a></p>
         </div>

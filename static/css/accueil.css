@@ -44,6 +44,31 @@ a {
     animation: displayFollowing 10s 3s ease-out forwards;
 }
 
+#links-container {
+    position: absolute;
+    right: 2%;
+    bottom: 5%;
+
+    max-width: 700px;
+    
+    display: grid;
+    grid-template-columns: repeat(4, 32px);
+    grid-template-rows: 1fr;
+    gap: 25px;
+    place-items: center;
+}
+
+#links-container.top-fixed {
+    position: fixed;
+    bottom: auto;
+    top: 5%;
+}
+
+#links-container a, #links-container img {
+    width: 32px;
+    height: 32px;
+}
+
 .headline h1 {
     line-height: 2rem;
 }
