@@ -56,6 +56,8 @@ a {
     grid-template-rows: 1fr;
     gap: 25px;
     place-items: center;
+
+    z-index: 10;
 }
 
 #links-container.top-fixed {
@@ -145,34 +147,36 @@ a {
 .skills .content {
     display: grid;
     grid-template-columns: 2fr 50px;
-    grid-template-rows: repeat(6, 1fr);
+    grid-template-rows: repeat(12, 0.5fr);
+    grid-auto-flow: dense;
     align-items: center;
     justify-items: center;
-    gap: 20px;
+    column-gap: 20px;
 
     overflow-x: hidden;
 }
 
-.skills .content .skill-tab {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-end;
-
-    height: 100%;
-
-    border-radius: 5px;
+.skills .content:nth-child(3n+1) {
+    row-gap: 20px;
 }
 
-.skills .content .skill-tab .head {
+.skills .content .head {
+    width: 100%;
+    grid-column: 1;
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
     gap: 20px;
+    justify-content: flex-start;
+
+    height: 100%;
+
+    border-radius: 5px;
+
+    margin-top: 10px;           /* Spacing between "visual" rows to keep img vertical centering */
 }
 
-.skills .content .skill-tab .head .progress {
+.skills .content .head .progress {
     width: 100px;
     height: 10px;
     background-color: grey;
@@ -180,7 +184,7 @@ a {
     position: relative;
 }
 
-.skills .content .skill-tab .head .progress .progress-value {
+.skills .content .head .progress .progress-value {
     position: absolute;
     right: 0%;
     height: 100%;
@@ -215,8 +219,18 @@ a {
     width: 60%;
 }*/
 
-.skills .content .skill-tab h2 {
+.skills .content h2 {
     height: fit-content;
+}
+
+.skills .content p {
+    grid-column: 1;
+    margin-bottom: 10px;        /* Spacing between "visual" rows to keep img vertical centering */
+}
+
+.skills .content img {
+    grid-column: 2 !important;
+    grid-row: auto / span 2;
 }
 
 img {
@@ -241,16 +255,23 @@ img {
 
     align-items: center;
 
-    column-gap: 40px;
-    row-gap: 80px;
+    column-gap: 20px;
+}
+
+.experience .content img {
+    grid-row: auto / span 3;
 }
 
 .experience .content .work-headline {
-    margin: 0 0 20px 0;
+    margin: 20px 0 20px 0;
+}
+
+.experience .content .work-timeline {
+    margin-bottom: 10px;
 }
 
 .experience .content .work-description {
-    margin: 0 0 10px 0;
+    margin: 0 0 20px 0;
 }
 
 .education {
@@ -274,6 +295,11 @@ img {
 
     column-gap: 40px;
     row-gap: 80px;
+}
+
+.education #insa-long {
+    text-align: end;
+    grid-column: 1 / span 2;
 }
 
 .education .content img {

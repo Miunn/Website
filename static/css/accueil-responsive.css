@@ -6,16 +6,28 @@
     }
 
     .background svg #following {
-        d: path("M 500 880 l -200 200 v 1700 l 800 175 v 1700 l -800 175 v 1300 l 800 175 v 1300 l -800 175 v 800 a 1 1 0 0 0 0 50 a 1 1 0 0 0 0 -50");
+        d: path("M 500 880 l -200 200 v 1700 l 800 175 v 1700 l -800 175 v 1300 l 800 175 v 1500 l -800 175 v 800 a 1 1 0 0 0 0 50 a 1 1 0 0 0 0 -50");
     }
 
     #links-container {
-        opacity: 1;
-        transition: opacity 0.3s;
-    }
+        /*opacity: 1;
+        transition: opacity 0.3s;*/
+
+        gap: 10px;
+        background-color: rgba(0,0,0,0.9);
+        box-shadow: -10px 6px 24px 15px rgba(0,0,0,0.9);
+        -webkit-box-shadow: -10px 6px 24px 15px rgba(0,0,0,0.9);
+  }
 
     #links-container.top-fixed {
-        opacity: 0;
+        /*opacity: 0;*/
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 24px);
+    }
+
+    #links-container a, #links-container img {
+        width: 24px;
+        height: 24px;
     }
 
     .headline {
@@ -130,30 +142,46 @@
 
     .skills .content img {
         grid-column: 1 !important;
+        grid-row: auto / span 1;
     }
 
-    .skills .content div {
+    .skills .content .head {
         grid-column: 2 !important;
-    }
 
-    .skills .content .skill-tab {
         justify-content: center;
         align-items: flex-start;
     }
 
-    .skills .content .skill-tab .head {
-        flex-direction: column;
-        align-items: flex-start;
-        margin-bottom: 20px;
+    .skills .content .head {
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
     }
 
-    .skills .content .skill-tab .head .progress-value {
+    .skills .content .head .progress-value {
         left: 0;
+    }
+
+    .skills .content p {
+        grid-column: 1 / span 2;
+        width: 100%;
     }
 
     .experience {
         margin-top: 0px;
         padding-bottom: 125px;
+    }
+
+    .experience .content img {
+        grid-row: auto / span 2;
+    }
+
+    .experience .content .work-timeline {
+        grid-column: 2 / span 1;
+    }
+
+    .experience .content .work-description {
+        grid-column: 1 / span 2;
     }
 
     .education {
@@ -163,6 +191,10 @@
 
     .education .content {
         grid-template-columns: 1fr 100px !important;
+    }
+
+    .education #insa-long {
+        text-align: start;
     }
 
     .education .content div {
@@ -202,6 +234,20 @@
 @media screen and (max-width: 500px) {
     .wrapper {
         /*max-width: 350px;*/
+    }
+
+    .skills .content .head {
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    .experience .content img {
+        grid-row: auto / span 1;
+    }
+
+    .experience .content .work-timeline {
+        grid-column: 1 / span 2;
     }
 }
 

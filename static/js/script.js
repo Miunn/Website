@@ -56,7 +56,7 @@ for (i = 0; i < targets.length; i++) {
 
 const elScrollable = document.querySelector("html")
 const elNav = document.querySelector("#links-container");
-const threshold = window.innerHeight - 75 - 0.05*window.innerHeight;
+const threshold = window.innerHeight - 76 - 0.05*window.innerHeight;
 console.log(window.innerHeight, threshold);
 const handleNav = () => {
   const scrollTop = elScrollable.scrollTop;
