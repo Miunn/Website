@@ -48,7 +48,6 @@ let observer = new IntersectionObserver(skillsObserverCallback, options);
 
 let targets = document.getElementsByClassName("progress-value");
 for (i = 0; i < targets.length; i++) {
-    console.log(targets.item(i));
     observer.observe(targets.item(i));
 }
 
@@ -60,7 +59,6 @@ const threshold = window.innerHeight - 76 - 0.05*window.innerHeight;
 console.log(window.innerHeight, threshold);
 const handleNav = () => {
   const scrollTop = elScrollable.scrollTop;
-  console.log(scrollTop);
   elNav.classList.toggle("top-fixed", scrollTop > threshold);
 };
 
