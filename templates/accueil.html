@@ -10,14 +10,14 @@
 {% block main %}
 
 <div class="background">
-    <svg viewBox="0 0 1400 8900" fill="none" stroke="white">
+    <svg viewBox="0 0 1400 9200" fill="none" stroke="white">
         <path id="cpu" stroke-width="15" stroke-linecap="round" stroke-linejoin="round"
             d="m 300 280 h 800 v 400 h -800 v -400 m 300 0 v -100 l -100 -100 a 1 1 0 0 0 -50 -50 a 1 1 0 0 0 50 50 m 200 200 v -200 a 1 1 0 0 0 0 -65 a 1 1 0 0 0 0 65 m 100 200 v -100 l 100 -100 a 1 1 0 0 0 50 -50 a 1 1 0 0 0 -50 50 m 200 300 h 100 l 100 -100 a 1 1 0 0 0 50 -50 a 1 1 0 0 0 -50 50 m -200 200 h 200 a 1 1 0 0 0 65 0 a 1 1 0 0 0 -65 0 m -200 100 h 100 l 100 100 a 1 1 0 0 0 50 50 a 1 1 0 0 0 -50 -50 m -500 0 v 100 l 100 100 a 1 1 0 0 0 50 50 a 1 1 0 0 0 -50 -50 m -200 -200 v 200 a 1 1 0 0 0 0 65 a 1 1 0 0 0 0 -65 m -100 -200 v 100 l -100 100 m -200 -300 h -100 l -100 100 a 1 1 0 0 0 -50 50 a 1 1 0 0 0 50 -50 m 200 -200 h -200 a 1 1 0 0 0 -65 0 a 1 1 0 0 0 65 0 m 200 -100 h -100 l -100 -100 a 1 1 0 0 0 -50 -50 a 1 1 0 0 0 50 50">
         </path>
         <path id="circle" stroke-width="15" stroke-linecap="round" stroke-linejoin="round"
             d="M 500 880 a 1 1 0 0 0 -50 50 a 1 1 0 0 0 50 -50"></path>
         <path id="following" stroke-width="15" stroke-linecap="round" stroke-linejoin="round"
-            d="M 500 880 l -200 200 v 1200 l 800 175 v 1400 l -800 175 v 1200 l 800 175 v 1300 l -800 175 v 700 a 1 1 0 0 0 0 50 a 1 1 0 0 0 0 -50">
+            d="M 500 880 l -200 200 v 1200 l 800 175 v 1400 l -800 175 v 1200 l 800 175 v 1300 l -800 175 v 1000 a 1 1 0 0 0 0 50 a 1 1 0 0 0 0 -50">
         </path>
     </svg>
 </div>
@@ -230,6 +230,12 @@
     <h1 class="rewards-title">Rewards</h1>
 
     <div class="content">
+        <img src="{{url_for('static', filename='assets/rootme.png')}}" alt="Root-Me" id="rootme">                
+        <div class="reward">
+            <h2 class="reward-headline">Root-Me</h2>
+            <p class="reward-description">370 points</p>
+        </div>
+
         <img src="{{url_for('static', filename='assets/codinsa.png')}}" alt="Cod'INSA" id="codinsa">
         <div class="reward">
             <h2 class="reward-headline">Cod'INSA 2022</h2>
