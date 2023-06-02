@@ -10,14 +10,14 @@
 {% block main %}
 
 <div class="background">
-    <svg viewBox="0 0 1400 9200" fill="none" stroke="white">
+    <svg viewBox="0 0 1400 9400" fill="none" stroke="white">
         <path id="cpu" stroke-width="15" stroke-linecap="round" stroke-linejoin="round"
             d="m 300 280 h 800 v 400 h -800 v -400 m 300 0 v -100 l -100 -100 a 1 1 0 0 0 -50 -50 a 1 1 0 0 0 50 50 m 200 200 v -200 a 1 1 0 0 0 0 -65 a 1 1 0 0 0 0 65 m 100 200 v -100 l 100 -100 a 1 1 0 0 0 50 -50 a 1 1 0 0 0 -50 50 m 200 300 h 100 l 100 -100 a 1 1 0 0 0 50 -50 a 1 1 0 0 0 -50 50 m -200 200 h 200 a 1 1 0 0 0 65 0 a 1 1 0 0 0 -65 0 m -200 100 h 100 l 100 100 a 1 1 0 0 0 50 50 a 1 1 0 0 0 -50 -50 m -500 0 v 100 l 100 100 a 1 1 0 0 0 50 50 a 1 1 0 0 0 -50 -50 m -200 -200 v 200 a 1 1 0 0 0 0 65 a 1 1 0 0 0 0 -65 m -100 -200 v 100 l -100 100 m -200 -300 h -100 l -100 100 a 1 1 0 0 0 -50 50 a 1 1 0 0 0 50 -50 m 200 -200 h -200 a 1 1 0 0 0 -65 0 a 1 1 0 0 0 65 0 m 200 -100 h -100 l -100 -100 a 1 1 0 0 0 -50 -50 a 1 1 0 0 0 50 50">
         </path>
         <path id="circle" stroke-width="15" stroke-linecap="round" stroke-linejoin="round"
             d="M 500 880 a 1 1 0 0 0 -50 50 a 1 1 0 0 0 50 -50"></path>
         <path id="following" stroke-width="15" stroke-linecap="round" stroke-linejoin="round"
-            d="M 500 880 l -200 200 v 1200 l 800 175 v 1400 l -800 175 v 1200 l 800 175 v 1300 l -800 175 v 1000 a 1 1 0 0 0 0 50 a 1 1 0 0 0 0 -50">
+            d="M 500 880 l -200 200 v 1200 l 800 175 v 1600 l -800 175 v 1200 l 800 175 v 1300 l -800 175 v 1000 a 1 1 0 0 0 0 50 a 1 1 0 0 0 0 -50">
         </path>
     </svg>
 </div>
@@ -98,7 +98,7 @@
             </div>
 
         </div>
-        <p>Automation and seccurity related scripts, math visualization</p>
+        <p>Automation and seccurity related scripts, math visualization. Low-level sockets programming.</p>
         <img id="python" src="{{url_for('static', filename='assets/python.png')}}" alt="Python">
 
 
@@ -109,7 +109,7 @@
             </div>
         </div>
         <p>Development of graphical applications such as Sudoku and Sokoban games using the SDL library.<br>Code
-            available on <a href="https://gitlab.com/Miunn/sudoku-c">GitLab</a></p>
+            available on <a class="underlined gitlab" href="https://gitlab.com/Miunn/sudoku-c">GitLab</a></p>
         <img id="clanguage" src="{{url_for('static', filename='assets/clanguage.png')}}" alt="C">
 
 
@@ -123,6 +123,15 @@
             templates. Full stack web development of a parking booking app.</p>
         <img id="flask" src="{{url_for('static', filename='assets/flask.png')}}" alt="Flask">
 
+        <div class="head">
+            <h2>Git</h2>
+            <div class="progress" title="60%">
+                <div class="progress-value" id="android-progress"></div>
+            </div>
+        </div>
+        <p>Usage of Git for every personnal and team projects using command line tool.
+            Comfortable with <span class="code">git stash</span>, <span class="code">git merge</span>, <span class="code">git rebase</span> and others.</p>
+        <img id="git" src="{{url_for('static', filename='assets/git.png')}}" alt="Android">
 
         <div class="head">
             <h2>Android</h2>
@@ -131,7 +140,7 @@
             </div>
         </div>
         <p>Native android applications development using Java and XML. Experience in Flutter
-            development.<br>Publications on the <a href="https://play.google.com/store/apps/developer?id=RCAapps">Google
+            development.<br>Publications on the <a class="underlined" href="https://play.google.com/store/apps/developer?id=RCAapps">Google
                 Play Store</a></p>
         <img id="android" src="{{url_for('static', filename='assets/android.png')}}" alt="Android">
 
@@ -143,8 +152,8 @@
             </div>
         </div>
         <p>Daily use of Kali Linux with xfce desktop, experience with Ubuntu and GNOME desktop. Use of networking and
-            hacking tools like <a href="https://nmap.org/">nmap</a> and <a
-                href="https://www.metasploit.com/">metasploit</a></p>
+            hacking tools like <a class="underlined nmap" href="https://nmap.org/">nmap</a> and <a
+            class="underlined metasploit" href="https://www.metasploit.com/">metasploit</a></p>
         <img id="linux" src="{{url_for('static', filename='assets/linux.png')}}" alt="Linux">
 
 
@@ -168,19 +177,19 @@
     <h1 class="exp-title">Experiences</h1>
 
     <div class="content">
-        <img id="insash" src="{{url_for('static', filename='assets/insash.png')}}" alt="./insa.sh">
+        <img class="img-hero" id="insash" src="{{url_for('static', filename='assets/insash.png')}}" alt="./insa.sh">
             <h2 class="work-headline">Board member of ./insa.sh</h2>
             <p class="work-timeline">Since September 2022</p>
         <p class="work-description">Treasurer at the computer science INSA HdF club ./insa.sh</p>
 
-        <img id="pandrol" src="{{url_for('static', filename='assets/pandrol.png')}}" alt="Pandrol">
-            <h2 class="work-headline" id="pandrol">Internship at Pandrol</h2>
+        <a class="img-hero" href="https://www.pandrol.com/" target="_blank"><img id="pandrol" src="{{url_for('static', filename='assets/pandrol.png')}}" alt="Pandrol"></a>
+            <h2 class="work-headline" id="pandrol">Internship at <a class="underlined" href="https://www.pandrol.com/" target="_blank">Pandrol</a></h2>
             <p class="work-timeline">From July to August 2021</p>
         <p class="work-description">Native android development including Bluetooth communication with Arduino-controlled sensors</p>
 
 
-        <img id="blondel" src="{{url_for('static', filename='assets/blondel.png')}}" alt="Groupe Blondel">
-            <h2 class="work-headline" id="pandrol">Discovery internship at Blondel</h2>
+        <a class="img-hero" href="https://www.groupe-blondel.com/" target="_blank"><img id="blondel" src="{{url_for('static', filename='assets/blondel.png')}}" alt="Groupe Blondel"></a>
+            <h2 class="work-headline" id="pandrol">Discovery internship at <a class="underlined" href="https://www.groupe-blondel.com/" target="_blank">Blondel</a></h2>
             <p class="work-timeline">From March to April 2017</p>
         <p class="work-description">PC configurator</p>
     </div>
@@ -195,24 +204,24 @@
     <h1 class="education-title">Education</h1>
 
     <div class="content">
-        <img src="{{url_for('static', filename='assets/insa.png')}}" alt="INSA HdF" id="insa">
+        <a href="https://www.insa-hautsdefrance.fr/en" target="_blank"><img src="{{url_for('static', filename='assets/insa.png')}}" alt="INSA HdF" id="insa"></a>
         <div class="educ">
-            <h2 class="education-headline">INSA<sup>&ast;</sup> Hauts de France</h2>
+            <h2 class="education-headline"><a class="underlined" href="https://www.insa-hautsdefrance.fr/en" target="_blank">INSA<sup>&ast;</sup> Hauts de France</a></h2>
             <p class="education-description">Since September 2022</p>
             <p class="education-description">First year in engineering specialized in Computer Science &
                 Cybersecurity</p>
         </div>
 
-        <img src="{{url_for('static', filename='assets/insa.png')}}" alt="INSA HdF" id="insa-prepa">
+        <a href="https://www.insa-hautsdefrance.fr/en" target="_blank"><img src="{{url_for('static', filename='assets/insa.png')}}" alt="INSA HdF" id="insa-prepa"></a>
         <div class="educ">
-            <h2 class="education-headline">INSA<sup>&ast;</sup> Hauts de France</h2>
+            <h2 class="education-headline"><a class="underlined" href="https://www.insa-hautsdefrance.fr/en" target="_blank">INSA<sup>&ast;</sup> Hauts de France</a></h2></a>
             <p class="education-description">From September 2020 to July 2022</p>
             <p class="educationn-description">Two years of intensive courses in Physics and Mathematics</p>
         </div>
 
-        <img src="{{url_for('static', filename='assets/watteau.png')}}" alt="Watteau" id="high-school">
+        <a href="https://lyceewatteauvalenciennes.etab.ac-lille.fr/" target="_blank"><img src="{{url_for('static', filename='assets/watteau.png')}}" alt="Watteau" id="high-school"></a>
         <div class="educ">
-            <h2 class="education-headline">Watteau high school</h2>
+            <h2 class="education-headline"><a class="underlined" href="https://lyceewatteauvalenciennes.etab.ac-lille.fr/" target="_blank">Watteau high school</a></h2>
             <p class="education-description">From September 2017 to July 2020</p>
             <p class="education-description">High school diploma with high distinctions specialized in Mathematics</p>
         </div>
@@ -222,29 +231,29 @@
 </div>
 
 <div class="wrapper left rewards">
-    <svg class="little-svg" viewBox="0 0 80 1500" fill="none" stroke="white">
+    <svg class="little-svg" viewBox="0 0 80 1800" fill="none" stroke="white">
         <path id="description-path" stroke-width="15" stroke-linejoin="round" stroke-linecap="round"
-            d="M 40 7 a 1 1 0 0 0 0 50 a 1 1 0 0 0 0 -50 a 1 1 0 0 0 0 50 v 1500"></path>
+            d="M 40 7 a 1 1 0 0 0 0 50 a 1 1 0 0 0 0 -50 a 1 1 0 0 0 0 50 v 1800"></path>
     </svg>
 
     <h1 class="rewards-title">Rewards & Achievements</h1>
 
     <div class="content">
-        <img src="{{url_for('static', filename='assets/rootme.png')}}" alt="Root-Me" id="rootme">                
+        <a href="https://www.root-me.org/Miunn#0c483c9459a0e70e719150677ed7e5b7" target="_blank"><img src="{{url_for('static', filename='assets/rootme.png')}}" alt="Root-Me" id="rootme"></a>
         <div class="reward">
-            <h2 class="reward-headline">Root-Me</h2>
+            <h2 class="reward-headline"><a class="underlined" href="https://www.root-me.org/Miunn#0c483c9459a0e70e719150677ed7e5b7">Root-Me</a></h2>
             <p class="reward-description">440 points</p>
         </div>
 
-        <img src="{{url_for('static', filename='assets/codinsa.png')}}" alt="Cod'INSA" id="codinsa">
+        <a href="https://codinsa.org" target="_blank"><img src="{{url_for('static', filename='assets/codinsa.png')}}" alt="Cod'INSA" id="codinsa"></a>
         <div class="reward">
-            <h2 class="reward-headline">Cod'INSA 2022</h2>
+            <h2 class="reward-headline"><a class="underlined" href="https://codinsa.org/static/past">Cod'INSA 2022 & 2023</a></h2>
             <p class="reward-description">6th place</p>
         </div>
 
-        <img src="{{url_for('static', filename='assets/codinsa.png')}}" alt="Cod'INSA" id="codinsa21">
+        <a href="https://codinsa.org" target="_blank"><img src="{{url_for('static', filename='assets/codinsa.png')}}" alt="Cod'INSA" id="codinsa21"></a>
         <div class="reward">
-            <h2 class="reward-headline">Cod'INSA 2021</h2>
+            <h2 class="reward-headline"><a class="underlined" href="https://codinsa.org/static/past">Cod'INSA 2021</a></h2>
             <p class="reward-description">7th place</p>
         </div>
     </div>
